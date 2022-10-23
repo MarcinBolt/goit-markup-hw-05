@@ -338,14 +338,14 @@ button[type='button'] {
 .section-customer-list {
   list-style: none;
   display: flex;
-  gap: 30px;
+  justify-content: space-between;
   padding-left: 0px;
   margin: 0px;
 }
 .section-customer-list-element a {
   display: flex;
   margin: 0px;
-  padding: 16px 32px;
+  padding: 17.71px 32px 14.25px 32px;
   border: 1px solid var(--customers-section-color-gray);
   fill: var(--customers-section-color-gray);
   transition: color, background, border, fill;
