@@ -164,29 +164,17 @@ button[type='button'] {
   text-align: center;
 }
 .section-top-button {
-  background: var(--brand-background-more-gray);
-  color: var(--brand-font-color-dark);
+  background: var(--logo-color-blue);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--brand-color-white);
   border-radius: 4px;
   border: 0px;
-  font-family: 'Roboto';
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
   align-items: center;
   letter-spacing: 0.06em;
   padding: 10px 41px 10px 42px;
-  transition: color, background, border, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.section-top-button:hover,
-.section-top-button:focus {
-  background: var(--logo-color-blue);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  color: var(--brand-color-white);
-  transition: color, background, border, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .content-division {
