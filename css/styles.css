@@ -162,8 +162,8 @@ button[type='button'] {
   text-align: center;
 }
 .section-top-button {
-  background: var(--logo-color-blue);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background: var(--brand-background-more-gray);
+  color: var(--brand-font-color-dark);
   border-radius: 4px;
   border: 0px;
   font-family: 'Roboto';
@@ -172,9 +172,20 @@ button[type='button'] {
   line-height: 1.875;
   align-items: center;
   letter-spacing: 0.06em;
-  color: var(--brand-color-white);
   padding: 10px 41px 10px 42px;
+  transition: color, background, border, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.section-top-button:hover {
+  background: var(--logo-color-blue);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--brand-color-white);
+  transition: color, background, border, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .content-division {
   padding-top: 94px;
 }
@@ -548,7 +559,7 @@ button[type='button'] {
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translatex(0);
+  transform: translateX(0);
   transition: transform 250ms ease;
 }
 .portfolio-filter-division-list-element {
@@ -570,7 +581,7 @@ button[type='button'] {
   position: absolute;
   padding: 49px 45px 49px 24px;
   margin: 0px;
-  transform: translatey(100%);
+  transform: translateY(100%);
   transition: transform 250ms ease;
   background: rgba(33, 150, 243, 0.9);
   top: 0;
@@ -610,7 +621,7 @@ button[type='button'] {
 /* **************************************** */
 /* **************************************** */
 
-/* Modal Window */
+/*              Modal Window */
 
 /* **************************************** */
 /* **************************************** */
@@ -622,15 +633,24 @@ button[type='button'] {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal {
   position: absolute;
-  top: 50%;
+  /* top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   width: 528px;
   height: 581px;
+  visibility: 100%;
+  opacity: 100%;
+  scale: 100%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   background-color: var(--brand-background-white);
 }
 
@@ -642,12 +662,39 @@ button[type='button'] {
   height: 30px;
   background-color: var(--brand-background-white);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  fill: var(--brand-color-black);
+  padding: 6px;
+  margin: 0px;
   border-radius: 50%;
   cursor: pointer;
+  transition-property: fill, background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-button:hover {
+  background-color: var(--logo-color-blue);
+  fill: var(--brand-background-white);
+  transition-property: fill, background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden-window {
+  opacity: inherit;
+  visibility: inherit;
+  scale: inherit;
+  transition-property: visibility, scale, border, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: easy-in;
 }
 
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  scale: 0;
+  transition-property: scale, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: easy-out;
 }
